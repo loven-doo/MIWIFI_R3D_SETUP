@@ -21,6 +21,7 @@ opkg install libc libncursesw busybox opkg
 ```
 
 ### Mount points creation inside /data/ directory
+Create mount points inside ```/data/``` directory:
 ```
 mkdir /data/etc
 mkdir /data/sys
