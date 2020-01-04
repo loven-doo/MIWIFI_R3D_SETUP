@@ -47,4 +47,4 @@ or directly from the ```chroot``` environment:
 chroot /data/ opkg update && opkg install transmission-cli-openssl
 ```
 Some packages may require imposible dependencies (for example, newer kernel version) - 
-try to use ```--force-depends option for ```opkg```
+try to use ```--force-depends``` option for ```opkg```
