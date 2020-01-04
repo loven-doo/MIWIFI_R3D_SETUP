@@ -1,6 +1,6 @@
 # MIWIFI_R3D_SETUP
 Steps to fix opkg package manager on XIAOMI Mi Router HD (R3D)  
-If you have an error "'xterm-256color': unknown terminal type." run the following command:
+If you have an error ```'xterm-256color': unknown terminal type.``` run the following command:
 ```
 export TERM=xterm
 ```
