@@ -27,8 +27,10 @@ mkdir /data/var
 ```
 
 ### Startup mounts to /data/
-Place ```data_mounts.sh``` script from this repo into ```/etc/init.d``` directory and 
-run ```chmod +x /ect/init.d/data_mounts.sh```
+Place ```data_mounts.sh``` script from this repo into ```/etc/init.d``` directory and run:
+```
+chmod +x /ect/init.d/data_mounts.sh
+```
 Restart the router
 
 ### OpenWRT packages environment usage
