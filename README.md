@@ -51,7 +51,7 @@ If you added new mount points add them to ```/ect/init.d/data_mounts.sh```
 ### OpenWRT packages environment usage
 To use packages installed from OpenWRT repositories with ```opkg``` can be run as follows:
 ```
-chroot /data/ htop
+chroot /data/ <the command>
 ```
 
 ### OpenWRT packages installation
