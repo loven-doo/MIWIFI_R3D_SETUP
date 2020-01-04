@@ -30,13 +30,23 @@ mkdir /data/dev
 mkdir /data/tmp
 mkdir /data/var
 ```
+If you need to add new mount point create its destination inside ```/data/``` directory:
+```
+mkdir /data/<new_mount_point>
+```
 
 ### Startup mounts to /data/
 Place ```data_mounts.sh``` script from this repo into ```/etc/init.d``` directory and run:
 ```
 chmod +x /ect/init.d/data_mounts.sh
 ```
-Restart the router
+Restart the router.
+
+If the mount script does not start automatically on the boot run:
+```
+/ect/init.d/data_mounts.sh start
+```
+If you added new mount points add them to ```/ect/init.d/data_mounts.sh```
 
 ### OpenWRT packages environment usage
 To use packages installed from OpenWRT repositories with ```opkg``` can be run as follows:
