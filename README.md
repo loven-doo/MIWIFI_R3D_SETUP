@@ -72,7 +72,7 @@ OpenWRT packages can be installed from standard environment with ```opkg```:
 opkg update
 opkg install transmission-cli-openssl
 ```
-If you have problems with libc install it as follows:
+If you have problems with ```libc``` install it as follows:
 ```
 opkg install http://archive.openwrt.org/snapshots/trunk/ipq806x/generic/packages/base/libc_1.1.16-1_ipq806x.ipk
 ```
