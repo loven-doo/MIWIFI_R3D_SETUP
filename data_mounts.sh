@@ -1,7 +1,7 @@
 #!/bin/sh /etc/rc.common
 
-START = 5
-STOP = 5
+START=5
+STOP=5
 
 start() {
     export TERM=xterm
