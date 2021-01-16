@@ -4,7 +4,6 @@ If you have an error ```'xterm-256color': unknown terminal type.``` run the foll
 ```
 export TERM=xterm
 ```
-
 ### Configure proper OpenWRT packages repositories
 Open ```/etc/opkg.conf``` for editting. Comment default repo link and insert proper links as follows:
 ```
@@ -13,14 +12,11 @@ src/gz standard http://archive.openwrt.org/snapshots/trunk/ipq806x/generic/packa
 src/gz packages http://archive.openwrt.org/snapshots/trunk/ipq806x/generic/packages/packages
 ```
 Run ```opkg update``` (twice if first run failed)
-
 ### Essential libs installation
 Do not care about error 127 that occurs during installation process. 
 ```
 opkg install libc libncursesw busybox opkg
-```  
-Place ```functions.sh``` script from this repo into ```/data/lib```
-
+```
 ### Mount points creation inside /data/ directory
 Create mount points inside ```/data/``` directory:
 ```
@@ -35,7 +31,6 @@ If you need to add new mount point create its destination inside ```/data/``` di
 ```
 mkdir /data/<new_mount_point>
 ```
-
 ### Startup mounts to /data/
 Place ```data_mounts.sh``` script from this repo into ```/etc/init.d``` directory and run:
 ```
@@ -49,28 +44,21 @@ If the mount script does not start automatically on the boot run:
 /ect/init.d/data_mounts.sh start
 ```
 If you added new mount points add them to ```/ect/init.d/data_mounts.sh```
-
 ### OpenWRT packages environment usage
-Packages installed from OpenWRT repositories with ```opkg``` can be run as follows:
+To use packages installed from OpenWRT repositories with ```opkg``` can be run as follows:
 ```
 chroot /data/ <the command>
 ```
-or you can enter the environment:
-```
-chroot /data
-```
-then run ```<the command>```
-
 ### OpenWRT packages installation
-Enter the environment:
-```
-chroot /data
-```
-or use the environment prefix before each your command  
 OpenWRT packages can be installed from standard environment with ```opkg```:
 ```
 opkg update
 opkg install transmission-cli-openssl
+```
+To clear opkg log from ```127``` errors:
+```
+rm /data/usr/lib/opkg/info/*
+echo "" > /data/usr/lib/opkg/status
 ```
 If you have problems with ```libc``` install it as follows:
 ```
