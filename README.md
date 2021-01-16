@@ -58,7 +58,9 @@ chroot /data/ <the command>
 OpenWRT packages can be installed from standard environment with ```opkg```:
 ```
 opkg update
-opkg install transmission-cli-openssl
+opkg install transmission-cli-openssl  # example
+/data/lib/redirect_functions.sh
+opkg install transmission-cli-openssl  # repeat after redirection
 ```
 To clear opkg log from ```127``` errors (strongly not recommended):
 ```
