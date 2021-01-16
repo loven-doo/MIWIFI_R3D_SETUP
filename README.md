@@ -17,6 +17,11 @@ Do not care about error 127 that occurs during installation process.
 ```
 opkg install libc libncursesw busybox opkg
 ```
+Place ```functions.sh``` and ```redirect_functions.sh``` scripts from this repo into ```/data/lib``` directory and run:
+```
+chmod +x /data/lib/functions.sh
+chmod +x /data/lib/redirect_functions.sh
+```
 ### Mount points creation inside /data/ directory
 Create mount points inside ```/data/``` directory:
 ```
@@ -32,7 +37,7 @@ If you need to add new mount point create its destination inside ```/data/``` di
 mkdir /data/<new_mount_point>
 ```
 ### Startup mounts to /data/
-Place ```data_mounts.sh``` script from this repo into ```/etc/init.d``` directory and run:
+Place ```data_mounts.sh``` and script from this repo into ```/etc/init.d``` directory and run:
 ```
 chmod +x /ect/init.d/data_mounts.sh
 /ect/init.d/data_mounts.sh enable
@@ -55,7 +60,7 @@ OpenWRT packages can be installed from standard environment with ```opkg```:
 opkg update
 opkg install transmission-cli-openssl
 ```
-To clear opkg log from ```127``` errors:
+To clear opkg log from ```127``` errors (strongly not recommended):
 ```
 rm /data/usr/lib/opkg/info/*
 echo "" > /data/usr/lib/opkg/status
