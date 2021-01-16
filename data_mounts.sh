@@ -1,5 +1,8 @@
 #!/bin/sh /etc/rc.common
 
+START = 5
+STOP = 5
+
 start() {
     export TERM=xterm
 
@@ -9,4 +12,13 @@ start() {
     mount --bind /etc /data/etc
     mount --bind /sys /data/sys
     mount --bind /var /data/var
+}
+
+stop() {
+    umount /data/tmp
+    umount /data/dev
+    umount /data/proc
+    umount /data/etc
+    umount /data/sys
+    umount /data/var
 }
