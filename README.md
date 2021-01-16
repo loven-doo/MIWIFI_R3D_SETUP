@@ -39,6 +39,7 @@ mkdir /data/<new_mount_point>
 Place ```data_mounts.sh``` script from this repo into ```/etc/init.d``` directory and run:
 ```
 chmod +x /ect/init.d/data_mounts.sh
+/ect/init.d/data_mounts.sh enable
 ```
 Restart the router.
 
