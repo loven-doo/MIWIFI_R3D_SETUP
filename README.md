@@ -18,7 +18,8 @@ Run ```opkg update``` (twice if first run failed)
 Do not care about error 127 that occurs during installation process. 
 ```
 opkg install libc libncursesw busybox opkg
-```
+```  
+Place ```functions.sh``` script from this repo into ```/data/lib```
 
 ### Mount points creation inside /data/ directory
 Create mount points inside ```/data/``` directory:
