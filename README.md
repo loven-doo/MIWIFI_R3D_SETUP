@@ -51,19 +51,28 @@ If the mount script does not start automatically on the boot run:
 If you added new mount points add them to ```/ect/init.d/data_mounts.sh```
 
 ### OpenWRT packages environment usage
-To use packages installed from OpenWRT repositories with ```opkg``` can be run as follows:
+Packages installed from OpenWRT repositories with ```opkg``` can be run as follows:
 ```
 chroot /data/ <the command>
 ```
+or you can enter the environment:
+```
+chroot /data
+```
+then run ```<the command>```
 
 ### OpenWRT packages installation
+Enter the environment:
+```
+chroot /data
+```
+or use the environment prefix before each your command  
 OpenWRT packages can be installed from standard environment with ```opkg```:
 ```
+opkg update
 opkg install transmission-cli-openssl
 ```
-or directly from the ```chroot``` environment:
+If you have problems with libc install it as follows:
 ```
-chroot /data/ opkg update && opkg install transmission-cli-openssl
+opkg install http://archive.openwrt.org/snapshots/trunk/ipq806x/generic/packages/base/libc_1.1.16-1_ipq806x.ipk
 ```
-Some packages may require imposible dependencies (for example, newer kernel version) - 
-try to use ```--force-depends``` option for ```opkg```
