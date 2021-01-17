@@ -13,14 +13,16 @@ src/gz packages http://archive.openwrt.org/snapshots/trunk/ipq806x/generic/packa
 ```
 Run ```opkg update``` (twice if first run failed)
 ### Essential libs installation
-Do not care about error 127 that occurs during installation process. 
-```
-opkg install libc libncursesw busybox opkg
-```
 Place ```functions.sh``` and ```redirect_functions.sh``` scripts from this repo into ```/data/lib``` directory and run:
 ```
 chmod +x /data/lib/functions.sh
 chmod +x /data/lib/redirect_functions.sh
+```
+Install ```libc```, ```libncurses``` and ```busybox```:
+```
+opkg install http://archive.openwrt.org/snapshots/trunk/ipq806x/generic/packages/base/libc_1.1.16-1_ipq806x.ipk libncursesw busybox
+/data/lib/redirect_functions.sh
+opkg install libc libncursesw busybox
 ```
 ### Mount points creation inside /data/ directory
 Create mount points inside ```/data/``` directory:
