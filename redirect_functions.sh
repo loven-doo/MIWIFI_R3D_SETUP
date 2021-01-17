@@ -1,7 +1,7 @@
 #!/bin/sh
 
-TO_REPLACE=/lib/functions.sh
-REPLACE_WITH=/data/lib/functions.sh
+TO_REPLACE=}/lib/functions.sh
+REPLACE_WITH=}/data/lib/functions.sh
 
 for FPATH in $(ls -d /data/usr/lib/opkg/info/*.postinst)
 do
