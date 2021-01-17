@@ -74,4 +74,6 @@ echo "" > /data/usr/lib/opkg/status
 If you have problems with ```libc``` install it as follows:
 ```
 opkg install http://archive.openwrt.org/snapshots/trunk/ipq806x/generic/packages/base/libc_1.1.16-1_ipq806x.ipk
+/data/lib/redirect_functions.sh
+opkg install libc
 ```
