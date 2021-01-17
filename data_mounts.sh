@@ -12,6 +12,7 @@ start() {
     mount --bind /etc /data/etc
     mount --bind /sys /data/sys
     mount --bind /var /data/var
+    mount --bind /userdisk/data /data/userdisk/data
 }
 
 stop() {
@@ -21,4 +22,5 @@ stop() {
     umount /data/etc
     umount /data/sys
     umount /data/var
+    umount /data/userdisk/data
 }
