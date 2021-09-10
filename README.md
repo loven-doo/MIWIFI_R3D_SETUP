@@ -39,7 +39,7 @@ If you need to add new mount point create its destination inside ```/data/``` di
 mkdir /data/<new_mount_point>
 ```
 ### Startup mounts to /data/
-Place ```data_mounts.sh``` and script from this repo into ```/etc/init.d``` directory and run:
+Place ```data_mounts.sh``` script from this repo into ```/etc/init.d``` directory and run:
 ```
 chmod +x /ect/init.d/data_mounts.sh
 /ect/init.d/data_mounts.sh enable
