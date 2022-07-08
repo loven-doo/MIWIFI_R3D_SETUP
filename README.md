@@ -41,18 +41,18 @@ mkdir /data/<new_mount_point>
 ### Startup mounts to /data/
 Place ```data_mounts.sh``` script from this repo into ```/etc/init.d``` directory and run:
 ```
-chmod +x /ect/init.d/data_mounts.sh
-/ect/init.d/data_mounts.sh enable
+chmod +x /etc/init.d/data_mounts.sh
+/etc/init.d/data_mounts.sh enable
 ```
 Restart the router.
 
 If the mount script does not start automatically on the boot run:
 ```
-/ect/init.d/data_mounts.sh start
+/etc/init.d/data_mounts.sh start
 ```
 To unmount, if needed, run:
 ```
-/ect/init.d/data_mounts.sh stop
+/etc/init.d/data_mounts.sh stop
 ```
 If you added new mount points add them to ```/ect/init.d/data_mounts.sh```
 ### OpenWRT packages environment usage
